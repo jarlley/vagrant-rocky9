@@ -5,11 +5,11 @@
 Vagrant.configure("2") do |config|
   config.ssh.username = "root"
   config.ssh.password = "passwd"
-  config.ssh.private_key_path = "C:\\Projects\\rocky9\\.ssh\\id_rsa"
+  config.ssh.private_key_path = "PATH TO THE PUBLIC KEY HERE"
   config.ssh.forward_agent = "true"
 
   config.vm.define "rocky" do |rocky|
-    config.vm.box = "rocky9"
+    config.vm.box = "jarlley/rocky9"
     config.vm.network "public_network", type: "dhcp"
 
     config.vm.provider "virtualbox" do |vb|
